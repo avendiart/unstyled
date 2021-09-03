@@ -1,4 +1,4 @@
-import { createElement } from 'react'
+import { createElement, forwardRef } from 'react'
 import { css } from '@emotion/css'
 import { Styles } from './styles'
 
@@ -12,15 +12,16 @@ export const createStyled =
       },
     ) => Styles | Styles[],
   ) =>
-  (props: X & JSX.IntrinsicElements[K]) => {
-    const theme = useTheme()
-    return createElement(tag, {
-      ...props,
-      className: css(
-        styles({
-          ...props,
-          theme,
-        }),
-      ),
+    forwardRef((props: X & JSX.IntrinsicElements[K], ref) => {
+      const theme = useTheme()
+      return createElement(tag, {
+        ...props,
+        className: css(
+          styles({
+            ...props,
+            theme,
+          }),
+        ),
+        ref,
+      })
     })
-  }

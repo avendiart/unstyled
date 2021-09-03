@@ -1,8 +1,12 @@
 {
+  "name": "unstyled",
   "private": true,
+  "scripts": {
+    "build": "lerna run build",
+    "watch": "lerna run --parallel watch"
+  },
   "devDependencies": {
     "lerna": "^4.0.0",
     "prettier": "^2.3.2"
-  },
-  "name": "unstyled"
+  }
 }

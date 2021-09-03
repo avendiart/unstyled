@@ -14,7 +14,9 @@
     "url": "git+https://github.com/avendiart/unstyled.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "tsc",
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "watch": "tsc --watch --preserveWatchOutput"
   },
   "bugs": {
     "url": "https://github.com/avendiart/unstyled/issues"
