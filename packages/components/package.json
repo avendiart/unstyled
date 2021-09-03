@@ -1,0 +1,47 @@
+{
+  "name": "@unstyled/components",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Vladislav Pilgasov <avendiart@gmail.com>",
+  "homepage": "https://github.com/avendiart/unstyled#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avendiart/unstyled.git"
+  },
+  "scripts": {
+    "build-storybook": "build-storybook",
+    "start-storybook": "start-storybook -p 6006",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/avendiart/unstyled/issues"
+  },
+  "dependencies": {
+    "@unstyled/styled": "0.0.0",
+    "@unstyled/tokens": "0.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.4",
+    "@storybook/addon-actions": "^6.3.8",
+    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-links": "^6.3.8",
+    "@storybook/react": "^6.3.8",
+    "@types/jest": "^27.0.1",
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
+    "babel-loader": "^8.2.2",
+    "jest": "^27.1.0",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.2"
+  }
+}
