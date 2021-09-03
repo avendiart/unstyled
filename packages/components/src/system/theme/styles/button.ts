@@ -1,9 +1,14 @@
+import { Styles } from '@unstyled/styled'
 import { tokens } from '../tokens'
 
-export const button = {
+export const button: Styles = {
   appearance: 'none',
-  paddingTop: tokens[2],
-  paddingLeft: tokens[4],
-  paddingRight: tokens[4],
-  paddingBottom: tokens[2],
-} as const
+  borderWidth: '0px',
+  borderRadius: '0px',
+  paddingTop: tokens[3],
+  paddingLeft: tokens[6],
+  paddingRight: tokens[6],
+  paddingBottom: tokens[3],
+  lineHeight: '16px',
+  fontSize: '16px',
+}

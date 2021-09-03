@@ -25,3 +25,5 @@ export const createStyled =
         ref,
       })
     })
+
+export { Styles }
