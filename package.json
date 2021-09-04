@@ -2,7 +2,7 @@
   "name": "unstyled",
   "private": true,
   "scripts": {
-    "build": "lerna run build",
+    "build": "lerna run --stream build",
     "watch": "lerna run --parallel watch"
   },
   "devDependencies": {
