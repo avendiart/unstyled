@@ -1,6 +1,9 @@
 {
   "name": "unstyled",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "build": "lerna run --stream build",
     "watch": "lerna run --parallel watch"
