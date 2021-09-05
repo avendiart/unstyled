@@ -6,10 +6,13 @@
   ],
   "scripts": {
     "build": "lerna run --stream build",
+    "build-storybook": "lerna run --parallel build-storybook",
+    "start-storybook": "lerna run --parallel start-storybook",
     "watch": "lerna run --parallel watch"
   },
   "devDependencies": {
     "lerna": "^4.0.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.3.2"
   }
 }
