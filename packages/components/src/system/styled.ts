@@ -1,4 +1,5 @@
-import { createStyled } from '@unstyled/styled'
+import { createStyled, createUseStyles } from '@unstyled/styled'
 import { useTheme } from './theme'
 
-export const styled = createStyled(useTheme)
+export const useStyles = createUseStyles(useTheme)
+export const styled = createStyled(useStyles)
