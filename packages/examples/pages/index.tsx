@@ -5,11 +5,13 @@ import { Button, theme as defaultTheme, ThemeContext } from '@unstyled/component
 const customTheme = mergeDeepRight(defaultTheme, {
   styles: {
     button: {
-      backgroundColor: '#0000ff',
-      color: '#ffffff',
-      '&:hover': {
-        backgroundColor: '#ff0000',
+      default: {
+        backgroundColor: '#0000ff',
         color: '#ffffff',
+        '&:hover': {
+          backgroundColor: '#ff0000',
+          color: '#ffffff',
+        },
       },
     },
   },
