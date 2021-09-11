@@ -23,3 +23,5 @@ export const Default: Story<CardProps> = (args) => (
     </CardActions>
   </Card>
 )
+
+Default.storyName = 'Card'

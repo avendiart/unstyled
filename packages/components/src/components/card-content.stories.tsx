@@ -10,3 +10,5 @@ export default {
 } as Meta<CardContentProps>
 
 export const Default: Story<CardContentProps> = (args) => <CardContent {...args}>Hello</CardContent>
+
+Default.storyName = 'CardContent'

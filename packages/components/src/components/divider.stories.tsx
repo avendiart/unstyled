@@ -10,3 +10,5 @@ export default {
 } as Meta<DividerProps>
 
 export const Default: Story<DividerProps> = (args) => <Divider {...args} />
+
+Default.storyName = 'Divider'

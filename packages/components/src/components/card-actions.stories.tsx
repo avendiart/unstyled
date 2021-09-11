@@ -16,3 +16,5 @@ export const Default: Story<CardActionsProps> = (args) => (
     <Button variant="secondary">Second</Button>
   </CardActions>
 )
+
+Default.storyName = 'CardActions'
