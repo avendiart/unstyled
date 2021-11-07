@@ -8,3 +8,5 @@ export const Divider = forwardRef<HTMLHRElement, DividerProps>((props, ref) => {
   const styles = useStyles('divider', {})
   return <Box as="hr" {...props} ref={ref} styles={styles} />
 })
+
+Divider.displayName = 'Divider'

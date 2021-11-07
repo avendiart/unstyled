@@ -8,3 +8,5 @@ export const Text = forwardRef<HTMLParagraphElement, TextProps>((props, ref) => 
   const styles = useStyles('text', {})
   return <Box as="p" {...props} ref={ref} styles={styles} />
 })
+
+Text.displayName = 'Text'

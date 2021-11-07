@@ -8,3 +8,5 @@ export const CardActions = forwardRef<HTMLDivElement, CardActionsProps>((props, 
   const styles = useStyles('cardActions', {})
   return <Box {...props} ref={ref} styles={styles} />
 })
+
+CardActions.displayName = 'CardActions'
