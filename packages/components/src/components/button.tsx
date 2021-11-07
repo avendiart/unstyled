@@ -1,20 +1,13 @@
-import { PropsWithoutRef } from 'react'
-import { useStyles } from '../system/styled'
+import { forwardRef, HTMLAttributes } from 'react'
+import { StylesProps, useStyles } from '../system/theme'
+import { Box } from './box'
 
-export type ButtonProps = PropsWithoutRef<JSX.IntrinsicElements['button']> & {
-  variant?: string
-}
+export type ButtonProps = StylesProps<'button'> & HTMLAttributes<HTMLButtonElement>
 
-export type ButtonComponent = React.ComponentType<ButtonProps>
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ variant, ...props }, ref) => {
+  const styles = useStyles('button', {
+    variant,
+  })
 
-export const Button: ButtonComponent = ({ variant, ...props }: ButtonProps) => {
-  const className = useStyles(
-    ({ theme }) => [
-      theme.styles.button.default,
-      variant ? theme.styles.button.variants[variant] ?? {} : {},
-    ],
-    {},
-  )
-
-  return <button {...props} className={className} />
-}
+  return <Box as="button" {...props} ref={ref} styles={styles} />
+})

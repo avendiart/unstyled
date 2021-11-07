@@ -1,20 +1,12 @@
-import { Styles } from '@unstyled/styled'
+import { Tokens } from '../tokens'
 
-export const divider: {
-  default: Styles
-  variants: Partial<{
-    [index: string]: Styles
-  }>
-} = {
-  default: {
-    height: '1px',
-    width: '100%',
-    marginTop: '0px',
-    marginLeft: '0px',
-    marginRight: '0px',
-    marginBottom: '0px',
-    background: '#eeeeee',
-    border: 'none',
-  },
-  variants: {},
-}
+export const divider = (tokens: Tokens) => () => ({
+  height: '1px',
+  width: '100%',
+  marginTop: '0px',
+  marginLeft: '0px',
+  marginRight: '0px',
+  marginBottom: '0px',
+  background: '#eeeeee',
+  border: 'none',
+})

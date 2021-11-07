@@ -1,20 +1,10 @@
-import { PropsWithoutRef } from 'react'
-import { useStyles } from '../system/styled'
+import { forwardRef, HTMLAttributes } from 'react'
+import { StylesProps, useStyles } from '../system/theme'
+import { Box } from './box'
 
-export type DividerProps = PropsWithoutRef<JSX.IntrinsicElements['hr']> & {
-  variant?: string
-}
+export type DividerProps = StylesProps<'divider'> & HTMLAttributes<HTMLHRElement>
 
-export type DividerComponent = React.ComponentType<DividerProps>
-
-export const Divider: DividerComponent = ({ variant, ...props }: DividerProps) => {
-  const className = useStyles(
-    ({ theme }) => [
-      theme.styles.divider.default,
-      variant ? theme.styles.divider.variants[variant] ?? {} : {},
-    ],
-    {},
-  )
-
-  return <hr {...props} className={className} />
-}
+export const Divider = forwardRef<HTMLHRElement, DividerProps>((props, ref) => {
+  const styles = useStyles('divider', {})
+  return <Box as="hr" {...props} ref={ref} styles={styles} />
+})

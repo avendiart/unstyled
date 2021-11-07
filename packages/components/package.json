@@ -26,10 +26,7 @@
   "bugs": {
     "url": "https://github.com/avendiart/unstyled/issues"
   },
-  "dependencies": {
-    "@unstyled/styled": "0.0.0",
-    "@unstyled/tokens": "0.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.15.4",
     "@storybook/addon-actions": "^6.3.8",
@@ -39,15 +36,18 @@
     "@types/jest": "^27.0.1",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
+    "@types/styled-components": "^5.1.15",
     "babel-loader": "^8.2.2",
     "jest": "^27.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3",
     "ts-jest": "^27.0.5",
     "typescript": "^4.4.2"
   },
   "peerDependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3"
   }
 }

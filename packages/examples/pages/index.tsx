@@ -1,5 +1,4 @@
 import { NextPage } from 'next'
-import { mergeDeepRight } from 'ramda'
 import * as Components from '@unstyled/components'
 
 const Home: NextPage = () => {
@@ -24,20 +23,25 @@ const Home: NextPage = () => {
         >
           <Components.Button variant="secondary">Button</Components.Button>
           <Components.ThemeContext.Provider
-            value={mergeDeepRight(Components.theme, {
+            value={{
+              ...Components.theme,
               styles: {
-                button: {
-                  default: {
-                    backgroundColor: '#0000ff',
-                    color: '#ffffff',
-                    '&:hover': {
-                      backgroundColor: '#ff0000',
+                ...Components.theme.styles,
+                button: (tokens) => (props) => {
+                  return [
+                    ...Components.theme.styles.button(tokens)(props),
+                    {
+                      backgroundColor: '#0000ff',
                       color: '#ffffff',
+                      ':hover': {
+                        backgroundColor: '#ff0000',
+                        color: '#ffffff',
+                      },
                     },
-                  },
+                  ]
                 },
               },
-            })}
+            }}
           >
             <Components.Button>Button</Components.Button>
           </Components.ThemeContext.Provider>

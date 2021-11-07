@@ -1,20 +1,10 @@
-import { PropsWithoutRef } from 'react'
-import { useStyles } from '../system/styled'
+import { forwardRef, HTMLAttributes } from 'react'
+import { StylesProps, useStyles } from '../system/theme'
+import { Box } from './box'
 
-export type CardActionsProps = PropsWithoutRef<JSX.IntrinsicElements['div']> & {
-  variant?: string
-}
+export type CardActionsProps = StylesProps<'cardActions'> & HTMLAttributes<HTMLDivElement>
 
-export type CardActionsComponent = React.ComponentType<CardActionsProps>
-
-export const CardActions: CardActionsComponent = ({ variant, ...props }: CardActionsProps) => {
-  const className = useStyles(
-    ({ theme }) => [
-      theme.styles.cardActions.default,
-      variant ? theme.styles.cardActions.variants[variant] ?? {} : {},
-    ],
-    {},
-  )
-
-  return <div {...props} className={className} />
-}
+export const CardActions = forwardRef<HTMLDivElement, CardActionsProps>((props, ref) => {
+  const styles = useStyles('cardActions', {})
+  return <Box {...props} ref={ref} styles={styles} />
+})

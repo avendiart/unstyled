@@ -12,4 +12,4 @@ export const styles = {
   cardContent,
   divider,
   text,
-} as const
+}

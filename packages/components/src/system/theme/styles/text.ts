@@ -1,20 +1,11 @@
-import { Styles } from '@unstyled/styled'
-import { tokens } from '../tokens'
+import { Tokens } from '../tokens'
 
-export const text: {
-  default: Styles
-  variants: Partial<{
-    [index: string]: Styles
-  }>
-} = {
-  default: {
-    marginTop: tokens[0],
-    marginLeft: tokens[0],
-    marginRight: tokens[0],
-    marginBottom: tokens[0],
-    fontFamily: 'sans-serif',
-    lineHeight: '24px',
-    fontSize: '16px',
-  },
-  variants: {},
-}
+export const text = (tokens: Tokens) => () => ({
+  marginTop: tokens.space[0],
+  marginLeft: tokens.space[0],
+  marginRight: tokens.space[0],
+  marginBottom: tokens.space[0],
+  fontFamily: 'sans-serif',
+  lineHeight: '24px',
+  fontSize: '16px',
+})

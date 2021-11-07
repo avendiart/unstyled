@@ -1,20 +1,10 @@
-import { PropsWithoutRef } from 'react'
-import { useStyles } from '../system/styled'
+import { forwardRef, HTMLAttributes } from 'react'
+import { StylesProps, useStyles } from '../system/theme'
+import { Box } from './box'
 
-export type TextProps = PropsWithoutRef<JSX.IntrinsicElements['p']> & {
-  variant?: string
-}
+export type TextProps = StylesProps<'text'> & HTMLAttributes<HTMLParagraphElement>
 
-export type TextComponent = React.ComponentType<TextProps>
-
-export const Text: TextComponent = ({ variant, ...props }: TextProps) => {
-  const className = useStyles(
-    ({ theme }) => [
-      theme.styles.text.default,
-      variant ? theme.styles.text.variants[variant] ?? {} : {},
-    ],
-    {},
-  )
-
-  return <p {...props} className={className} />
-}
+export const Text = forwardRef<HTMLParagraphElement, TextProps>((props, ref) => {
+  const styles = useStyles('text', {})
+  return <Box as="p" {...props} ref={ref} styles={styles} />
+})
