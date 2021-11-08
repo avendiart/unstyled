@@ -1,6 +1,7 @@
+import { CSSInterpolation } from '@emotion/css'
 import { Tokens } from '../tokens'
 
-export const divider = (tokens: Tokens) => () => ({
+export const divider = (tokens: Tokens) => (): CSSInterpolation => ({
   height: '1px',
   width: '100%',
   marginTop: '0px',

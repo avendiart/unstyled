@@ -1,12 +1,12 @@
+import { css } from '@emotion/css'
 import { forwardRef, HTMLAttributes } from 'react'
 import { StylesProps, useStyles } from '../system/theme'
-import { Box } from './box'
 
 export type TextProps = StylesProps<'text'> & HTMLAttributes<HTMLParagraphElement>
 
 export const Text = forwardRef<HTMLParagraphElement, TextProps>((props, ref) => {
   const styles = useStyles('text', {})
-  return <Box as="p" {...props} ref={ref} styles={styles} />
+  return <p {...props} ref={ref} className={css(styles)} />
 })
 
 Text.displayName = 'Text'

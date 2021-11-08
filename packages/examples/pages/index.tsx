@@ -31,7 +31,7 @@ const Home: NextPage = () => {
                   return [
                     ...Components.theme.styles.button(tokens)(props),
                     {
-                      backgroundColor: '#0000ff',
+                      backgroundColor: '#00ffff',
                       color: '#ffffff',
                       ':hover': {
                         backgroundColor: '#ff0000',

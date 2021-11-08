@@ -1,7 +1,7 @@
-import { CSSObject } from 'styled-components'
+import { CSSInterpolation } from '@emotion/css'
 import { Tokens } from '../tokens'
 
-export const cardActions = (tokens: Tokens) => (): CSSObject => ({
+export const cardActions = (tokens: Tokens) => (): CSSInterpolation => ({
   display: 'flex',
   justifyContent: 'flex-start',
   flexDirection: 'row-reverse',

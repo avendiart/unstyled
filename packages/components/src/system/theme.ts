@@ -1,4 +1,3 @@
-import { CSSObject } from 'styled-components'
 import { createContext, useContext, useMemo } from 'react'
 import { styles } from './theme/styles'
 import { tokens } from './theme/tokens'
@@ -29,8 +28,9 @@ export const useStyles = <C extends keyof Theme['styles']>(
   props?: StylesProps<C>,
 ) => {
   const theme = useTheme()
-  return useMemo(
-    () => theme.styles[component](theme.tokens)(props ?? {}),
-    [component, theme, props],
-  )
+  return useMemo(() => theme.styles[component](theme.tokens)(props ?? {}), [
+    component,
+    theme,
+    props,
+  ])
 }

@@ -1,7 +1,7 @@
-import { CSSObject } from 'styled-components'
+import { CSSInterpolation } from '@emotion/css'
 import { Tokens } from '../tokens'
 
-export const cardContent = (tokens: Tokens) => (): CSSObject => ({
+export const cardContent = (tokens: Tokens) => (): CSSInterpolation => ({
   display: 'flex',
   flexDirection: 'column',
   paddingTop: tokens.space[0],

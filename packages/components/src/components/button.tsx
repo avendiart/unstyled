@@ -1,6 +1,6 @@
+import { css } from '@emotion/css'
 import { forwardRef, HTMLAttributes } from 'react'
 import { StylesProps, useStyles } from '../system/theme'
-import { Box } from './box'
 
 export type ButtonProps = StylesProps<'button'> & HTMLAttributes<HTMLButtonElement>
 
@@ -9,7 +9,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ variant, ...
     variant,
   })
 
-  return <Box as="button" {...props} ref={ref} styles={styles} />
+  return <button {...props} ref={ref} className={css(styles)} />
 })
 
 Button.displayName = 'Button'

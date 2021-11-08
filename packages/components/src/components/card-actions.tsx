@@ -1,12 +1,12 @@
+import { css } from '@emotion/css'
 import { forwardRef, HTMLAttributes } from 'react'
 import { StylesProps, useStyles } from '../system/theme'
-import { Box } from './box'
 
 export type CardActionsProps = StylesProps<'cardActions'> & HTMLAttributes<HTMLDivElement>
 
 export const CardActions = forwardRef<HTMLDivElement, CardActionsProps>((props, ref) => {
   const styles = useStyles('cardActions', {})
-  return <Box {...props} ref={ref} styles={styles} />
+  return <div {...props} ref={ref} className={css(styles)} />
 })
 
 CardActions.displayName = 'CardActions'
